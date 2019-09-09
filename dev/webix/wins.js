@@ -40,7 +40,7 @@ if (window.desktopApp)
                 left: 50,
                 top: 50,
                 close: true,
-                resize: true,     
+                resize: true,
                 move: true,
                 head: {
                     cols: [
@@ -129,7 +129,7 @@ if (window.desktopApp)
                 input.removeAttribute("directory");
                 webix.ui.filemanager.prototype.uploadFile.call(this, id, e);
             };
-            
+
             win.show();
         },
 
@@ -236,7 +236,7 @@ if (window.desktopApp)
                             click: function() {
                                 win.hide();
                             }
-                        }, 
+                        },
                         {
                             view: "icon",
                             icon: "mdi mdi-fullscreen",
@@ -268,20 +268,20 @@ if (window.desktopApp)
                     view: "dhx-gantt",
                     id: "gantt",
                     refresh: true,
-                    },
+                },
 
             });
-           
+
             gantt.refreshData();
             gantt.config.order_branch = true;
             gantt.config.order_branch_free = true;
             gantt.load(server);
-           
+
             var dp = new gantt.dataProcessor(server);
             dp.init(gantt);
             dp.setTransactionMode("REST");
             win.show();
-        }, 
+        },
 
         showApp: function(id) {
             if (id == "filemanager") {
@@ -295,7 +295,7 @@ if (window.desktopApp)
                     desktopApp.loginOut();
                     desktopApp.wins.LoginIn();
                     desktopApp.signOut();
- 
+
                 }
 
             } else if (id == "full-screen") {
@@ -304,8 +304,8 @@ if (window.desktopApp)
                     item.state = item.state ? 0 : 1;
                     this.refresh(id);
                 }
-            } 
+            }
         }
     };
 
-    desktopApp.init();
+desktopApp.init();

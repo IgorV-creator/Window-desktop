@@ -8,7 +8,7 @@ desktopApp = {
         webix.attachEvent("onFocusChange", function(view) {
             if (view) {
                 var win = view.getTopParentView();
-                   if (win.getParentView())
+                if (win.getParentView())
                     win = win.getParentView().getTopParentView();
                 var id = win.config.id;
                 if (id.indexOf("_win") != -1) {
@@ -16,8 +16,8 @@ desktopApp = {
                 }
             }
         });
-    }, 
-        
+    },
+
     signIn: function() {
         webix.$$('main').show();
         webix.$$('toolbar').show();
@@ -27,9 +27,9 @@ desktopApp = {
         webix.$$("toolbar").hide();
         webix.$$("desktop").hide();
         webix.$$("winmenu-options-list").hide();
-  
+
         webix.$$("sign-in").show();
-    },               
+    },
     loginOut: (() => {
         webix.send("/logout", null, "GET");
     }),
@@ -151,7 +151,7 @@ desktopApp = {
                             view: "template",
                             css: "start_menu_list",
                             height: 60,
-                            template: 'http->/login',                          
+                            template: 'http->/login',
                         },
                         {
                             id: "winmenu-options-list",
@@ -183,5 +183,5 @@ desktopApp = {
                 }]
             }
         })
-    }  
-}; 
+    }
+};

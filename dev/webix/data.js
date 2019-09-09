@@ -6,4 +6,4 @@ var desktop_icons = [
     { id: "sign-out", value: "Sign out", value1: "Login", image: "/images/signout.png", image1: "/images/home-account.png", state: 0 }
 ];
 
-var tolbar_icons = [{ id: "laddFie", value: " ADD File", image: "/images/window-icon.png" }]; 
+var tolbar_icons = [{ id: "laddFie", value: " ADD File", image: "/images/window-icon.png" }];

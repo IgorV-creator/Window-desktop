@@ -6,7 +6,7 @@ var desktop_icons = [
     { id: "sign-out", value: "Sign out", value1: "Login", image: "/images/signout.png", image1: "/images/home-account.png", state: 0 }
 ];
 
-var tolbar_icons = [{ id: "laddFie", value: " ADD File", image: "/images/window-icon.png" }]; 
+var tolbar_icons = [{ id: "laddFie", value: " ADD File", image: "/images/window-icon.png" }];
 desktopApp = {
     buttonCount: 1,
     init: function() {
@@ -17,7 +17,7 @@ desktopApp = {
         webix.attachEvent("onFocusChange", function(view) {
             if (view) {
                 var win = view.getTopParentView();
-                   if (win.getParentView())
+                if (win.getParentView())
                     win = win.getParentView().getTopParentView();
                 var id = win.config.id;
                 if (id.indexOf("_win") != -1) {
@@ -25,8 +25,8 @@ desktopApp = {
                 }
             }
         });
-    }, 
-        
+    },
+
     signIn: function() {
         webix.$$('main').show();
         webix.$$('toolbar').show();
@@ -36,9 +36,9 @@ desktopApp = {
         webix.$$("toolbar").hide();
         webix.$$("desktop").hide();
         webix.$$("winmenu-options-list").hide();
-  
+
         webix.$$("sign-in").show();
-    },               
+    },
     loginOut: (() => {
         webix.send("/logout", null, "GET");
     }),
@@ -160,7 +160,7 @@ desktopApp = {
                             view: "template",
                             css: "start_menu_list",
                             height: 60,
-                            template: 'http->/login',                          
+                            template: 'http->/login',
                         },
                         {
                             id: "winmenu-options-list",
@@ -192,8 +192,8 @@ desktopApp = {
                 }]
             }
         })
-    }  
-}; 
+    }
+};
 if (window.desktopApp)
     desktopApp.wins = {
 
@@ -236,7 +236,7 @@ if (window.desktopApp)
                 left: 50,
                 top: 50,
                 close: true,
-                resize: true,     
+                resize: true,
                 move: true,
                 head: {
                     cols: [
@@ -325,7 +325,7 @@ if (window.desktopApp)
                 input.removeAttribute("directory");
                 webix.ui.filemanager.prototype.uploadFile.call(this, id, e);
             };
-            
+
             win.show();
         },
 
@@ -432,7 +432,7 @@ if (window.desktopApp)
                             click: function() {
                                 win.hide();
                             }
-                        }, 
+                        },
                         {
                             view: "icon",
                             icon: "mdi mdi-fullscreen",
@@ -464,20 +464,20 @@ if (window.desktopApp)
                     view: "dhx-gantt",
                     id: "gantt",
                     refresh: true,
-                    },
+                },
 
             });
-           
+
             gantt.refreshData();
             gantt.config.order_branch = true;
             gantt.config.order_branch_free = true;
             gantt.load(server);
-           
+
             var dp = new gantt.dataProcessor(server);
             dp.init(gantt);
             dp.setTransactionMode("REST");
             win.show();
-        }, 
+        },
 
         showApp: function(id) {
             if (id == "filemanager") {
@@ -491,7 +491,7 @@ if (window.desktopApp)
                     desktopApp.loginOut();
                     desktopApp.wins.LoginIn();
                     desktopApp.signOut();
- 
+
                 }
 
             } else if (id == "full-screen") {
@@ -500,8 +500,8 @@ if (window.desktopApp)
                     item.state = item.state ? 0 : 1;
                     this.refresh(id);
                 }
-            } 
+            }
         }
     };
 
-    desktopApp.init();
+desktopApp.init();
