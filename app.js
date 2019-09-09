@@ -30,7 +30,6 @@ app.use(staticAsset(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 //подключаем скрипты и стили
-app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')));
 app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'webix')));
 app.use('/stylesheets', express.static(path.join(__dirname, 'node_modules', 'webix')));
 app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'webix', 'gantt')));
