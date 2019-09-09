@@ -1,0 +1,82 @@
+.webix_menu-x .webix_list_item .webix_submenu_icon:before {
+    content: "\F001";
+    display: none;
+}
+
+.winmenu_css {
+    display: block;
+    z-index: 100;
+    //height: auto !important;
+    // position: absolute!important;
+    bottom: 38px!important;
+    top: auto !important;
+    width: 300px !important;
+    background: $backgroundMenu!important;
+    .webix_list .webix_list_item.webix_selected {
+        border-bottom: 0 !important;
+    }
+    .start_menu_list {
+        // margin-top: 100px !important;
+        border-width: 0 !important;
+        overflow-y: hidden !important;
+        background: $backgroundMenu !important;
+        border-radius: 2px;
+        border-bottom: none !important;
+        color: white !important;
+        font-size: 16px;
+        .webix_list_item {
+            border-bottom: 0;
+            background: $backgroundMenu!important;
+            color: white;
+            padding-top: 15px !important;
+        }
+    }
+}
+
+#menu_sys_icon {
+    float: left;
+    padding: 0 10px;
+}
+
+.webix_template {
+    text-align: center;
+}
+
+.webix_transparent .webix_button {
+    color: #475466;
+    background: transparent;
+    border: none;
+    border: 1px solid #65a0ff00 !important;
+}
+
+.webix_img_btn:hover {
+    border-radius: 3px;
+    height: inherit;
+    border: 1px solid #5e5e61ce !important;
+    background-color: #68be85 !important;
+    .webix_transparent {
+        margin-left: -20px !important;
+        background-color: #171a18 !important;
+    }
+}
+
+.toolbar-bottom,
+.time_template {
+    box-sizing: content-box;
+    background: #0000009c !important;
+    color: white !important;
+    font-size: 13px !important;
+    float: right !important;
+    overflow-y: hidden !important;
+    .webix_list_item {
+        height: 60px !important;
+    }
+    .webix_list_item {
+        background: $backgroundMenu !important;
+    }
+}
+
+.webix_toolbar {
+    border: 10px;
+   
+}

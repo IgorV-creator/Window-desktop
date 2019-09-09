@@ -1,0 +1,97 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.uslog {
+    float: right;
+    text-align: -webkit-right;
+    color: $primaryColor;
+    margin-top: -50px;
+    height: 10px;
+    margin-right: $freeSpace;
+}
+
+
+/* desktop */
+
+.webix_toolbar .webix_view.time_template {
+    font-size: 13px !important;
+}
+
+.webix_popup_button,
+.webix_button {
+    margin: 0 !important;
+}
+
+.desktop-window,
+.desktop-items {
+    width: 105px;
+    height: 400px !important;
+    top: 50px !important;
+    left: 30px !important;
+    right: 120px;
+    background: #ffffff00!important;
+    border: 0!important;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0), 0 1px 7px 0 rgba(0, 0, 0, 0) !important;
+    .webix_win_head {
+        display: none;
+    }
+    .webix_list_item {
+        border-bottom: 0 !important;
+    }
+}
+
+.desktop-icons {
+    font-size: 13px;
+    height: auto;
+    color: #FFFFFF;
+}
+
+.desktop-items {
+    background: transparent;
+    overflow-y: hidden !important;
+}
+
+.desktop-items .webix_list_item,
+.desktop-items .webix_list_item.webix_selected,
+.webix_drag_zone .webix_list_item {
+    padding: 10px 10px 1px 10px;
+    text-align: center;
+    line-height: 17px;
+    border: none;
+    box-shadow: none;
+}
+
+.webix_drag_zone {
+    box-shadow: none;
+}
+
+.webix_drag_zone .webix_list_item.webix_selected {
+    padding: 10px 10px 1px 10px;
+}
+
+.webix_drag_zone .webix_list_item.webix_selected .desktop-item-inner {
+    box-shadow: none;
+    background: transparent;
+}
+
+.webix_drag_over .desktop-item-inner,
+.desktop-items .desktop-item-inner:hover,
+.webix_selected .desktop-item-inner {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.desktop-items .webix_list_item.webix_selected,
+.webix_drag_over.webix_list_item,
+.webix_drag_zone,
+.webix_drag_zone .webix_list_item.webix_selected {
+    background: transparent;
+}
+
+.desktop-item-inner {
+    padding: 5px 5px;
+    text-shadow: 1px 1px #000;
+}

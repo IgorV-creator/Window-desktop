@@ -1,0 +1,50 @@
+$blackColor: #333;
+$whiteColor: #fff;
+$greyColor:#bbdfdf;
+$primaryColor: #08aef1;
+$secondaryColor: #d9ab4d;
+$successColor: #87bf0a;
+$errorColor: #e82c0c;
+$backgroundMenu: #0000005e;
+$freeSpace: 15px;
+$headerHeight: 20px;
+$footerHeight: 30px;
+$borderRadius: 2px;
+@import 'typography';
+@import 'tolbar';
+@import 'links';
+@import 'forms';
+//@import'gantt';
+html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: url('../images/photos.jpg') repeat-x 100% 100%;
+}
+
+h1 {
+    z-index: 10;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    color: $blackColor;
+    // background-color: lighten($greyColor, 15);
+    //padding-top: $headerHeight + $freeSpace;
+}
+
+.desktop-layout {
+    background: transparent;
+}
+
+.webix_dataview_item.desktop-item {
+    border: none;
+}
+
+.start-menu-item:hover {
+    background: url("../images/icon-bg.png");
+}
+
+@import 'main';
