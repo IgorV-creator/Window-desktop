@@ -17,7 +17,7 @@ Prototype API Window desktop (рабочий стол)
 13. Вывод Login авторизованного пользователя в основном меню и на рабочем столе.
 
 
-![Window](https://raw.githubusercontent.com/IgorV-creator/window-decstop/master/public/images/Window%20desktop.png)
+![Window](https://raw.githubusercontent.com/IgorV-creator/window-desktop/master/public/images/Window%20desktop.png)
 
 
 Внимание! 14. API является прототипом и требует доработки в части refresh модулей "Ганта" и "Планировщик"( в настоящий момент первичное обновление действий возможно только после обновления модального окна). 15. API имеет возможность дополнения функционалом персонализации и управления доступом для модуля "Файловый" менеджер создания и чтения файлов. В настоящий момент персонализация доступна только для модулей "Ганта" и "Планировщик".
