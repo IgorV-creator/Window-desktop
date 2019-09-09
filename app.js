@@ -32,11 +32,8 @@ app.use(bodyParser.json());
 //подключаем скрипты и стили
 app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'webix')));
 app.use('/stylesheets', express.static(path.join(__dirname, 'node_modules', 'webix')));
-app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'webix', 'gantt')));
-app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'webix', 'filemanager', 'codebase')));
-app.use('/stylesheets', express.static(path.join(__dirname, 'node_modules', 'webix', 'filemanager', 'codebase')));
-app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'webix', 'scheduler', 'codebase')));
-app.use('/stylesheets', express.static(path.join(__dirname, 'node_modules', 'webix', 'scheduler', 'codebase')));
+app.use('/javascripts', express.static(path.join(__dirname, 'webix')));
+app.use('/stylesheets', express.static(path.join(__dirname, 'webix')));
 
 //подключаем вывод id и login для авторизации и управлением контентом 
 app.get('/', (req, res) => {
