@@ -22,10 +22,13 @@ Prototype API Window desktop (рабочий стол)
 
 Внимание! 14. API является прототипом и требует доработки в части refresh модулей "Ганта" и "Планировщик"( в настоящий момент первичное обновление действий возможно только после обновления модального окна). 15. API имеет возможность дополнения функционалом персонализации и управления доступом для модуля "Файловый" менеджер создания и чтения файлов. В настоящий момент персонализация доступна только для модулей "Ганта" и "Планировщик".
 
-Язык программирования - ES5/ES6. Сервер и среда - node.js, webix. Шаблон проекта - ejs. Стили - scss, css. База данных - mongodb.
+Язык программирования - ES5/ES6. Сервер и среда - node.js, [Webix](https://webix.com). Шаблон проекта - ejs. Стили - scss, css. База данных - [mongodb](https://cloud.mongodb.com).
 
 Для инициализации API на своем ПК необходимо скачать прилагаемые файлы и установить нижеперечисленные модули: 
-0. Используйте port localhost:3000 или свой в файле config
+Используйте port localhost:3000 или свой в файле config
+
+## dependencies
+
 1. npm init - инициализируем package.json
 2. npm install express // основная платформа для моделирования
 3. npm install ejs //позволяет работать с шаблоном ejs
@@ -41,8 +44,7 @@ Prototype API Window desktop (рабочий стол)
 13. npm install path // предоставляет утилиты для работы с путями к файлам и директориям
 14. npm install busboy // Поддержка form-data в запросах с телом
 15. npm install date-format-lite // библиотека для разбора и форматирования дат
-16. npm install transliter //Конвертируйте текст на разные языки на Node.js и в браузере - необходим для добавления Login Пользователя в    
-    персональную ссылку сохраняемую в БД
+16. npm install transliter //Конвертируйте текст на разные языки на Node.js и в браузере - необходим для добавления Login Пользователя в персональную ссылку сохраняемую в БД
 17. npm install wfs-local //Драйвер локальных файлов
 18. npm install wfs-s3 // Веб-файловая систем
 19. npm install bcrypt-nodejs // для шифрование паролей
@@ -54,14 +56,14 @@ Prototype API Window desktop (рабочий стол)
 21. npm install -d nodemon // подготавливаем скрипты запуска в package.json 
 23. npm install --save-dev gulp // Помогает автоматизировать трудоемкие задачи в процессе разработки 
 24.	npm install --save-dev gulp-sass 
-		npm install --save-dev gulp-autoprefixer 
-		npm install --save-dev gulp-cssnano -//remove 
-		npm install --save-dev gulp-scss 
-		npm install --save-dev gulp-uglifyjs // - позволяет сжимать скрипты //remove 
-		npm install --save-dev gulp-concat // - слияние скриптов (concatenation). 
-		npm install --save-dev gulp-plumber // для отслеживания ошибок gulp 
+		* npm install --save-dev gulp-autoprefixer 
+		* npm install --save-dev gulp-cssnano -//remove 
+		* npm install --save-dev gulp-scss 
+		* npm install --save-dev gulp-uglifyjs // - позволяет сжимать скрипты //remove 
+		* npm install --save-dev gulp-concat // - слияние скриптов (concatenation). 
+		* npm install --save-dev gulp-plumber // для отслеживания ошибок gulp 
 25. npm install --save-dev eslint eslint-plugin-node // Oпционально - сoздаем файл .eslintrc и добавляем скрипт из документации
 
-//***********/config.js - главный конфигурационный файл в котором храним порт настройки БД и т.п. создаем переменную окружения в package.json где указываем настройки сервера databese.js основной файл доступа к БД ии устанавливаем модуль ((прописываем MONGO_URL в config). index.js. Начальный загрузочный файл. Если в index происходит подключение, далее идет обработка в арр.js Файлы .env.example /.env содержат конфигурации настройки подключения к БД и управлением сессией. Обязательно перепишите SESSION_SECRET - рандомно nodemon.json - создание переменной окружения для разработки //*****/
+***config.js - главный конфигурационный файл в котором храним порт настройки БД и т.п. создаем переменную окружения в package.json где указываем настройки сервера databese.js основной файл доступа к БД ии устанавливаем модуль ((прописываем MONGO_URL в config). index.js. Начальный загрузочный файл. Если в index происходит подключение, далее идет обработка в арр.js Файлы .env.example /.env содержат конфигурации настройки подключения к БД и управлением сессией. SESSION_SECRET - рандомно. nodemon.json - создание переменной окружения для разработки ***
 
-# window-desktop
+# window-desktop - [DEMO](https://window-decstop.herokuapp.com)
