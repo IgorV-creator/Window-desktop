@@ -39,15 +39,15 @@ function serveR() { //функция вызова сервера
     function scripts() {
         return gulp
             .src([
-                'dev/webix/data.js', //подключаем файл webix/form.js                
-                'dev/webix/index.js', //подключаем файл webix/form.js
-                'dev/webix/wins.js', //подключаем файл webix/form.js
+                'dev/js/webix/data.js', //подключаем файл webix/form.js                
+                'dev/js/webix/index.js', //подключаем файл webix/form.js
+                'dev/js/webix/wins.js', //подключаем файл webix/form.js
             ])
             .pipe(concat('scripts.js'))
             //.pipe(uglify()) //сжимает скрипты (на данном проекте потребуется изменение структуры /dev/webix/index)
             .pipe(gulp.dest('public/javascripts')); // выгружает сжатые скрипты
 
     }
-    gulp.watch('./dev/webix/**/*.js', scripts);
+    gulp.watch('./dev/js/**/*.js', scripts);
 }
 module.exports.default = gulp.series(serveR, css); // устанавливаем дуфолтную работу сервера и скриптов
