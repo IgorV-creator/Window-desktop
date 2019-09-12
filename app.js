@@ -38,7 +38,9 @@ app.use('/javascripts', express.static(path.join(__dirname, 'js', 'webix', 'file
 app.use('/stylesheets', express.static(path.join(__dirname, 'js', 'webix', 'filemanager')));
 app.use('/javascripts', express.static(path.join(__dirname, 'js', 'webix', 'scheduler')));
 app.use('/stylesheets', express.static(path.join(__dirname, 'js', 'webix', 'scheduler')));
-//app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')))
+app.use('/javascripts', express.static(path.join(__dirname, 'js', 'enjoyhint')));
+app.use('/stylesheets', express.static(path.join(__dirname, 'js', 'enjoyhint')));
+app.use('/javascripts', express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist')))
 
 //подключаем вывод id и login для авторизации и управлением контентом 
 app.get('/', (req, res) => {

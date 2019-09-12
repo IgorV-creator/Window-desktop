@@ -3,6 +3,7 @@ var element_log = [{
     label: 'Username',
     name: "login",
     id: "login-login",
+    css: "login_login",
     required: true,
     validate: webix.rules.isNotEmpty,
     invalidMessage: "Логин не может быть пустым",
@@ -10,6 +11,7 @@ var element_log = [{
     view: "text",
     type: "password",
     id: "password-login",
+    css: "pass",
     label: "Password",
     name: "password",
     required: true,
@@ -139,3 +141,30 @@ var win = webix.ui({
     id: "loginIn",
     cells: form
 });
+
+//enjoyhint
+
+var enjoyhint = new EnjoyHint();
+var array_enjoy = [{
+    "next .login_login": "Введите свой логин",
+    scrollAnimationSpeed: 2000,
+    nextButton: {
+        className: 'myClass',
+        text: 'Следующая'
+    },
+    skipButton: {
+        className: 'myClass',
+        text: 'Отмена'
+    },
+    showSkip: true,
+    showNext: true
+}, {
+    "click .pass": "Введите свой пароль",
+    skipButton: {
+        className: 'myClass',
+        text: 'Отмена'
+    },
+
+}];
+enjoyhint.set(array_enjoy);
+enjoyhint.run();
