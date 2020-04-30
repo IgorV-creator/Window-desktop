@@ -29,7 +29,7 @@
         "express": "^4.17.1",
         "express-session": "^1.16.2",
         "fs": "0.0.1-security",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "mime": "^2.4.4",
         "mongodb": "^3.3.2",
         "mongoose": "^5.7.0",
